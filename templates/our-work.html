@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - JLS Assembly & Home Improvements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#263894',
+                        secondary: '#f3e15c',
+                        lightGray: '#9d9d9d',
+                        darkGray: '#5a5a5a'
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body text-darkGray bg-gray-50">
+    <!-- Top Header Bar -->
+    <div class="bg-primary py-3 px-4 text-center text-white text-sm">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-2 md:mb-0">
+                <i class="fas fa-phone-alt mr-2"></i> Call: (251) 513-1651
+                <span class="hidden md:inline-block mx-4">|</span>
+                <i class="fas fa-envelope ml-2 mr-2"></i> jlsassembly@yahoo.com
+            </div>
+            <div class="flex space-x-4">
+                <span>Mon-Fri: 8AM - 6PM</span>
+                <span class="hidden md:inline-block">|</span>
+                <span>Sat-Sun: 11AM - 6PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo/Brand -->
+                <div class="flex items-center">
+                    <img src="../static/images/jlslogo.png" alt="JLS Assembly Logo" class="h-12 w-auto mr-3">
+                    <div>
+                        <h1 class="font-heading font-bold text-xl text-primary">JLS Assembly</h1>
+                        <p class="text-sm text-lightGray">& Home Improvements</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-darkGray hover:text-primary font-medium transition duration-300">Home</a>
+                    <a href="index.html#about" class="text-darkGray hover:text-primary font-medium transition duration-300">About</a>
+                    <a href="index.html#services" class="text-darkGray hover:text-primary font-medium transition duration-300">Services</a>
+                    <a href="our-work.html" class="text-primary font-medium transition duration-300">Our Work</a>
+                    <a href="index.html#contact" class="text-darkGray hover:text-primary font-medium transition duration-300">Contact</a>
+                </div>
+                
+                <!-- Call to Action Button -->
+                <div class="hidden lg:block">
+                    <a href="index.html#contact" class="bg-primary hover:bg-blue-800 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Our Work Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-heading font-bold text-primary">Our Work Gallery</h1>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-3"></div>
+                <p class="text-lg text-darkGray max-w-2xl mx-auto mt-4">
+                    Take a look at some of our completed projects showcasing quality craftsmanship and attention to detail.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Work Image 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366.webp" alt="Professional Assembly Work" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Professional Assembly</h3>
+                        <p class="text-darkGray text-sm">Expert furniture assembly with precision and care.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (1).webp" alt="TV Mounting Service" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">TV Mounting</h3>
+                        <p class="text-darkGray text-sm">Secure and professional TV mounting services.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (2).webp" alt="Picture Hanging" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Picture Hanging</h3>
+                        <p class="text-darkGray text-sm">Perfect picture placement and hanging services.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (3).webp" alt="Home Improvement Project" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Home Improvements</h3>
+                        <p class="text-darkGray text-sm">Quality home improvement services with attention to detail.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (4).webp" alt="Assembly Project" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Professional Assembly</h3>
+                        <p class="text-darkGray text-sm">Expert assembly services for all types of furniture.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (5).webp" alt="Installation Project" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Installation Services</h3>
+                        <p class="text-darkGray text-sm">Professional installation with precision and care.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 7 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (6).webp" alt="Professional Installation" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Professional Installation</h3>
+                        <p class="text-darkGray text-sm">Expert installation services with guaranteed satisfaction.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 8 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (7).webp" alt="Quality Assembly Work" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Quality Assembly</h3>
+                        <p class="text-darkGray text-sm">Meticulous assembly work with attention to every detail.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 9 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (8).webp" alt="Home Improvement Excellence" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Home Improvement</h3>
+                        <p class="text-darkGray text-sm">Comprehensive home improvement solutions.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 10 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (9).webp" alt="Precision Mounting" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Precision Mounting</h3>
+                        <p class="text-darkGray text-sm">Accurate and secure mounting for all your needs.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 11 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (10).webp" alt="Custom Solutions" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Custom Solutions</h3>
+                        <p class="text-darkGray text-sm">Tailored solutions for unique project requirements.</p>
+                    </div>
+                </div>
+                
+                <!-- Work Image 12 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="../static/images/1366 (11).webp" alt="Expert Craftsmanship" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-primary mb-2">Expert Craftsmanship</h3>
+                        <p class="text-darkGray text-sm">Superior craftsmanship in every project we complete.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-darkGray mb-4">Ready to start your project?</p>
+                <a href="index.html#contact" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-300">
+                    Get Your Free Quote Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-primary pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="mb-8">
+                    <h2 class="font-heading text-2xl font-bold text-primary mb-2">JLS Assembly & Home Improvements</h2>
+                    <p class="text-darkGray text-lg">Professional Services Since 1988</p>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="font-bold text-primary mb-4 text-lg">Follow Us</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.facebook.com/profile.php?id=100064114780990" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jls_assembly_homeimp" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.yelp.com/biz/jls-assembly-and-home-improvements-conyers" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Yelp">
+                            <i class="fab fa-yelp text-xl"></i>
+                        </a>
+                        <a href="https://www.thumbtack.com/ga/conyers/handyman/jls-assembly-home-improvements-rvr/service/399610228306444290" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Thumbtack">
+                            <i class="fas fa-thumbtack text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-primary border-opacity-30 pt-6">
+                    <p class="text-darkGray text-sm">&copy; 2025 JLS Assembly & Home Improvements. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

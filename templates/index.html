@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLS Assembly & Home Improvements | Professional Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#263894',
+                        secondary: '#f3e15c',
+                        lightGray: '#9d9d9d',
+                        darkGray: '#5a5a5a'
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        .tool-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tool-icon:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 8px rgba(243, 225, 92, 0.6));
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-input {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-input:focus {
+            box-shadow: 0 0 0 3px rgba(38, 56, 148, 0.3);
+        }
+        
+        .award-badge {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(243, 225, 92, 0.6);
+            }
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(243, 225, 92, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(243, 225, 92, 0);
+            }
+        }
+        
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(38, 56, 148, 0.8), rgba(38, 56, 148, 0.95));
+            z-index: 1;
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-body text-darkGray bg-gray-50">
+    <!-- Top Header Bar -->
+    <div class="bg-primary py-3 px-4 text-center text-white text-sm">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-2 md:mb-0">
+                <i class="fas fa-phone-alt mr-2"></i> Call: (251) 513-1651
+                <span class="hidden md:inline-block mx-4">|</span>
+                <i class="fas fa-envelope ml-2 mr-2"></i> jlsassembly@yahoo.com
+            </div>
+            <div class="flex space-x-4">
+                <span>Mon-Fri: 8AM - 6PM</span>
+                <span class="hidden md:inline-block">|</span>
+                <span>Sat-Sun: 11AM - 6PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo/Brand -->
+                <div class="flex items-center">
+                    <img src="../static/images/jlslogo.png" alt="JLS Assembly Logo" class="h-12 w-auto mr-3">
+                    <div>
+                        <h1 class="font-heading font-bold text-xl text-primary">JLS Assembly</h1>
+                        <p class="text-sm text-lightGray">& Home Improvements</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-darkGray hover:text-primary font-medium transition duration-300">Home</a>
+                    <a href="#about" class="text-darkGray hover:text-primary font-medium transition duration-300">About</a>
+                    <a href="#services" class="text-darkGray hover:text-primary font-medium transition duration-300">Services</a>
+                    <a href="our-work.html" class="text-darkGray hover:text-primary font-medium transition duration-300">Our Work</a>
+                    <a href="#contact" class="text-darkGray hover:text-primary font-medium transition duration-300">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-darkGray hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Call to Action Button -->
+                <div class="hidden lg:block">
+                    <a href="#contact" class="bg-primary hover:bg-blue-800 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+                <div class="py-4 space-y-4">
+                    <a href="#home" class="block text-darkGray hover:text-primary font-medium transition duration-300 px-4 py-2">Home</a>
+                    <a href="#about" class="block text-darkGray hover:text-primary font-medium transition duration-300 px-4 py-2">About</a>
+                    <a href="#services" class="block text-darkGray hover:text-primary font-medium transition duration-300 px-4 py-2">Services</a>
+                    <a href="our-work.html" class="block text-darkGray hover:text-primary font-medium transition duration-300 px-4 py-2">Our Work</a>
+                    <a href="#contact" class="block text-darkGray hover:text-primary font-medium transition duration-300 px-4 py-2">Contact</a>
+                    <div class="px-4 py-2">
+                        <a href="#contact" class="block w-full text-center bg-primary hover:bg-blue-800 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero relative py-20 md:py-28" style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80'); background-size: cover; background-position: center;">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-8">JLS Assembly & Home Improvements</h1>
+                <p class="text-xl text-gray-100 mb-10 leading-relaxed">Reliable, professional, and always on time. Book today!</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-secondary hover:bg-yellow-500 text-primary font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">Book a Service</a>
+                    <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300">Our Services</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Tools -->
+        <div class="absolute bottom-0 z-0 w-full flex justify-between px-10 opacity-10">
+            <div class="tool-icon">
+                <i class="fas fa-tools text-white text-5xl"></i>
+            </div>
+            <div class="tool-icon">
+                <i class="fas fa-hammer text-white text-5xl"></i>
+            </div>
+            <div class="tool-icon">
+                <i class="fas fa-screwdriver text-white text-5xl"></i>
+            </div>
+            <div class="tool-icon">
+                <i class="fas fa-wrench text-white text-5xl"></i>
+            </div>
+            <div class="tool-icon">
+                <i class="fas fa-ruler-combined text-white text-5xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Info & About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0">
+                    <div class="relative group">
+                        <!-- Modern rectangular frame -->
+                        <div class="relative w-80 h-96 mx-auto">
+                            <div class="absolute inset-0 bg-gradient-to-br from-secondary via-yellow-400 to-yellow-600 rounded-3xl transform rotate-6 shadow-2xl group-hover:rotate-12 transition-transform duration-500"></div>
+                            <div class="absolute inset-2 bg-white rounded-3xl shadow-inner">
+                                <div class="absolute inset-3 rounded-2xl overflow-hidden">
+                                    <img src="../static/images/jaquanscales.jpg" alt="JaQuan Scales - Owner" class="w-full h-full object-cover object-top">
+                                </div>
+                            </div>
+                            <!-- Professional badge -->
+                            <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-3 rounded-full font-bold text-sm shadow-xl border-4 border-white">
+                                <i class="fas fa-star text-secondary mr-2"></i>Top Pro Since 1988
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <div class="flex items-center mb-6">
+                        <h2 class="text-3xl font-heading font-bold text-primary">About JaQuan Scales</h2>
+                        <span class="ml-4 px-3 py-1 bg-secondary text-primary rounded-full font-bold text-sm">TOP PRO</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <p class="text-lg mb-6 leading-relaxed">
+                            I am a people-oriented individual who completes every task in a timely manner, no matter what it may be. With 36 years in business, I've been hired over 460 times and am proud to be a multi-year Thumbtack Top Pro.
+                        </p>
+                        
+                        <!-- REMOVE THIS PARAGRAPH:
+                        <p class="text-lg mb-6 leading-relaxed">
+                            <strong>MOUNT YOUR TV AND HANG YOUR PICTURES THE EASY WAY</strong> - Take advantage of our wall mounting services in the Conyers, GA area. Even if you're not very good at mounting things on your wall, you can still enjoy exceptional results. The trick is relying on JLS Assembly & Home Improvements for wall mounting services. We can hang up and mount a variety of items to best meet your needs.
+                        </p>
+                        -->
+                        <div class="flex items-center mb-8">
+                            <i class="fas fa-map-marker-alt text-primary text-xl mr-3"></i>
+                            <div>
+                                <h3 class="font-bold">Based in Conyers, GA</h3>
+                                <p class="text-lightGray">Serving Atlanta and surrounding areas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-heading font-bold text-xl text-primary mb-4">Top Pro Awards</h3>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="award-badge flex flex-col items-center justify-center bg-primary text-white py-3 px-6 rounded-full">
+                            <span>2021</span>
+                            <i class="fas fa-star text-secondary"></i>
+                        </div>
+                        <div class="award-badge flex flex-col items-center justify-center bg-primary text-white py-3 px-6 rounded-full">
+                            <span>2022</span>
+                            <i class="fas fa-star text-secondary"></i>
+                        </div>
+                        <div class="award-badge flex flex-col items-center justify-center bg-primary text-white py-3 px-6 rounded-full">
+                            <span>2023</span>
+                            <i class="fas fa-star text-secondary"></i>
+                        </div>
+                        <div class="award-badge flex flex-col items-center justify-center bg-primary text-white py-3 px-6 rounded-full">
+                            <span>2024</span>
+                            <i class="fas fa-star text-secondary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Pricing Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-heading font-bold text-primary">Our Services & Pricing</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-3"></div>
+                <p class="text-lg text-darkGray max-w-2xl mx-auto mt-4">
+                    Expert services delivered with precision and professionalism
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-image text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-primary mb-4">Picture Hanging</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="text-lightGray">1-5 items</span>
+                                <span class="font-bold">$35</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="text-lightGray">6-10 items</span>
+                                <span class="font-bold">$30</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lightGray">11-15 items</span>
+                                <span class="font-bold">$25</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-4">
+                        <a href="#contact" class="text-primary hover:text-secondary font-bold">Book Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg relative">
+                    <div class="absolute top-4 right-4 bg-secondary text-primary px-3 py-1 rounded-full font-bold text-sm">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-tv text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-primary mb-4">TV Mounting</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="text-lightGray">Up to 60"</span>
+                                <span class="font-bold">$85</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lightGray">60-70"</span>
+                                <span class="font-bold">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-4">
+                        <a href="#contact" class="text-primary hover:text-secondary font-bold">Book Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-blinds text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-primary mb-4">Drapery, Blinds & Curtains</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="text-lightGray">Curtain hanging</span>
+                                <span class="font-bold">$50</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lightGray">Blind installation</span>
+                                <span class="font-bold">$35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-4">
+                        <a href="#contact" class="text-primary hover:text-secondary font-bold">Book Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-primary text-white rounded-xl overflow-hidden shadow-xl">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/4 flex justify-center p-6">
+                        <i class="fas fa-home text-5xl text-secondary"></i>
+                    </div>
+                    <div class="md:w-3/4 p-6">
+                        <h3 class="font-heading font-bold text-2xl mb-2">General Home Improvements</h3>
+                        <p class="mb-4">
+                            Need something more complex? Contact us for all your home improvement projects.
+                            We handle everything from furniture assembly to more advanced home modifications.
+                        </p>
+                        <a href="#contact" class="text-secondary hover:text-white font-bold">Request Custom Service <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Pricing & Project Information Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-heading font-bold text-primary">Get Your Custom Quote</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-3"></div>
+                <p class="text-lg text-darkGray max-w-2xl mx-auto mt-4">
+                    Your price is estimated using these details. Add or adjust your responses for an accurate estimate.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Timeline Options -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-primary mb-4">📅 Project Timeline</h3>
+                    <ul class="space-y-2 text-darkGray">
+                        <li>• Same Day (if available)</li>
+                        <li>• Next Day</li>
+                        <li>• Within 3 Days</li>
+                        <li>• Within a Week</li>
+                        <li>• Flexible Scheduling</li>
+                    </ul>
+                </div>
+                
+                <!-- Number of Items -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-primary mb-4">📦 Number of Items</h3>
+                    <ul class="space-y-2 text-darkGray">
+                        <li>• 1-2 Items</li>
+                        <li>• 3-5 Items</li>
+                        <li>• 6-10 Items</li>
+                        <li>• 10+ Items</li>
+                        <li>• Bulk Projects</li>
+                    </ul>
+                </div>
+                
+                <!-- Instructions Available -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-primary mb-4">📋 Instructions</h3>
+                    <ul class="space-y-2 text-darkGray">
+                        <li>• Complete Instructions</li>
+                        <li>• Partial Instructions</li>
+                        <li>• No Instructions</li>
+                        <li>• Digital Instructions</li>
+                        <li>• Video Tutorials Available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-darkGray mb-6">Ready to get started? Contact us for a personalized quote!</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:(251)513-1651" class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-300">
+                        📞 Call Now
+                    </a>
+                    <a href="sms:(251)513-1651" class="bg-secondary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-300">
+                        💬 Text Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REMOVE THIS ENTIRE SECTION -->
+    <!-- Our Work Gallery Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-heading font-bold text-primary">Our Work</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-3"></div>
+                <p class="text-lg text-darkGray max-w-2xl mx-auto mt-4">
+                    See the quality craftsmanship and attention to detail in our completed projects.
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Gallery Grid - All cards including TV Mounting, Picture Hanging, Furniture Assembly, etc. -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- All 6 gallery cards go here -->
+                </div>
+                
+                <!-- Gallery Note -->
+                <div class="mt-12 text-center">
+                    <div class="bg-primary text-white rounded-xl p-8">
+                        <h3 class="text-2xl font-heading font-bold mb-4">Gallery Updates Coming Soon!</h3>
+                        <p class="text-lg text-gray-200 mb-6">We're currently updating our gallery with recent project photos. Check back soon to see our latest work!</p>
+                        <a href="#contact" class="bg-secondary hover:bg-yellow-500 text-primary font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-camera mr-2"></i>Request Project Photos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END REMOVAL -->
+    <!-- REMOVE THIS ENTIRE CARD -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-image text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 font-semibold">Before & After</p>
+                <p class="text-gray-400 text-sm">Photos coming soon</p>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-primary mb-2">Transformation Projects</h3>
+            <p class="text-darkGray text-sm">See the amazing before and after results</p>
+        </div>
+    </div>
+    <!-- END REMOVAL -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-image text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 font-semibold">TV Mounting Projects</p>
+                <p class="text-gray-400 text-sm">Photos coming soon</p>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-primary mb-2">Professional TV Mounting</h3>
+            <p class="text-darkGray text-sm">Clean, secure installations with hidden cables</p>
+        </div>
+    </div>
+    
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-image text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 font-semibold">Picture Hanging</p>
+                <p class="text-gray-400 text-sm">Photos coming soon</p>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-primary mb-2">Picture & Art Installation</h3>
+            <p class="text-darkGray text-sm">Perfect placement and secure mounting</p>
+        </div>
+    </div>
+    
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-image text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 font-semibold">Furniture Assembly</p>
+                <p class="text-gray-400 text-sm">Photos coming soon</p>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-primary mb-2">Furniture Assembly</h3>
+            <p class="text-darkGray text-sm">Expert assembly of all furniture types</p>
+        </div>
+    </div>
+    
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-image text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 font-semibold">Curtains & Blinds</p>
+                <p class="text-gray-400 text-sm">Photos coming soon</p>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-primary mb-2">Window Treatments</h3>
+            <p class="text-darkGray text-sm">Professional curtain and blind installation</p>
+        </div>
+    </div>
+    
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-image text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 font-semibold">Home Improvements</p>
+                <p class="text-gray-400 text-sm">Photos coming soon</p>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-primary mb-2">General Home Improvements</h3>
+            <p class="text-darkGray text-sm">Various home improvement projects</p>
+        </div>
+    </div>
+    
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-image text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 font-semibold">Before & After</p>
+                <p class="text-gray-400 text-sm">Photos coming soon</p>
+            </div>
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-primary mb-2">Transformation Projects</h3>
+            <p class="text-darkGray text-sm">See the amazing before and after results</p>
+        </div>
+    </div>
+                </div>
+                
+                <!-- Gallery Note -->
+                <div class="mt-12 text-center">
+                    <div class="bg-primary text-white rounded-xl p-8">
+                        <h3 class="text-2xl font-heading font-bold mb-4">Gallery Updates Coming Soon!</h3>
+                        <p class="text-lg text-gray-200 mb-6">We're currently updating our gallery with recent project photos. Check back soon to see our latest work!</p>
+                        <a href="#contact" class="bg-secondary hover:bg-yellow-500 text-primary font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-camera mr-2"></i>Request Project Photos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-blue-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Book now and get your job done right the first time!</h2>
+            <p class="text-xl text-gray-200 max-w-2xl mx-auto mb-10">
+                With 36 years of experience, we guarantee quality workmanship and customer satisfaction
+            </p>
+            <a href="#contact" class="bg-secondary hover:bg-yellow-500 text-primary font-bold py-4 px-12 rounded-full text-lg inline-block shadow-lg transition duration-300 transform hover:scale-105">
+                Book Your Appointment
+            </a>
+        </div>
+    </section>
+
+    <!-- Hours & Payments Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-heading font-bold text-primary">Business Hours & Payment Methods</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto mt-3"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="font-bold text-xl text-primary mb-6 flex items-center">
+                            <i class="far fa-clock text-xl text-secondary mr-3"></i> Business Hours
+                        </h3>
+                        <div class="bg-gray-50 p-6 rounded-xl shadow">
+                            <div class="flex justify-between border-b py-3">
+                                <span>Monday - Friday</span>
+                                <span class="font-semibold">8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between py-3">
+                                <span>Saturday - Sunday</span>
+                                <span class="font-semibold">11:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold text-xl text-primary mb-6 flex items-center">
+                            <i class="fas fa-credit-card text-xl text-secondary mr-3"></i> We Accept
+                        </h3>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="flex flex-col items-center bg-gray-50 py-4 rounded-xl shadow">
+                                <i class="fas fa-money-bill-wave text-3xl text-primary mb-2"></i>
+                                <span class="font-semibold">Cash</span>
+                            </div>
+                            <div class="flex flex-col items-center bg-gray-50 py-4 rounded-xl shadow">
+                                <i class="fab fa-paypal text-3xl text-blue-600 mb-2"></i>
+                                <span class="font-semibold">PayPal</span>
+                            </div>
+                            <div class="flex flex-col items-center bg-gray-50 py-4 rounded-xl shadow">
+                                <i class="fas fa-mobile-alt text-3xl text-green-600 mb-2"></i>
+                                <span class="font-semibold">Cash App</span>
+                            </div>
+                            <div class="flex flex-col items-center bg-gray-50 py-4 rounded-xl shadow">
+                                <i class="fab fa-venmo text-3xl text-blue-500 mb-2"></i>
+                                <span class="font-semibold">Venmo</span>
+                            </div>
+                            <div class="flex flex-col items-center bg-gray-50 py-4 rounded-xl shadow">
+                                <i class="fas fa-building text-3xl text-indigo-600 mb-2"></i>
+                                <span class="font-semibold">Zelle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Our Customers Say Section - MOVED OUTSIDE FOOTER -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl font-bold text-primary mb-4">What Our Customers Say</h2>
+                <p class="text-darkGray text-lg max-w-2xl mx-auto">Don't just take our word for it - see what our satisfied customers have to say about our professional services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+                <!-- Customer Review 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="static/images/Screenshot 2025-06-04 165559.png" alt="Customer Review 1" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex text-yellow-400 text-sm mb-2">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-darkGray text-sm">Excellent service and professional installation.</p>
+                    </div>
+                </div>
+                
+                <!-- Customer Review 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="static/images/Screenshot 2025-06-04 165613.png" alt="Customer Review 2" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex text-yellow-400 text-sm mb-2">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-darkGray text-sm">Quick response and quality workmanship.</p>
+                    </div>
+                </div>
+                
+                <!-- Customer Review 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="static/images/Screenshot 2025-06-04 165643.png" alt="Customer Review 3" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex text-yellow-400 text-sm mb-2">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-darkGray text-sm">Highly recommend for all assembly needs.</p>
+                    </div>
+                </div>
+                
+                <!-- Customer Review 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="static/images/Screenshot 2025-06-04 165703.png" alt="Customer Review 4" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex text-yellow-400 text-sm mb-2">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-darkGray text-sm">Professional team with great attention to detail.</p>
+                    </div>
+                </div>
+                
+                <!-- Customer Review 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="static/images/Screenshot 2025-06-04 165727.png" alt="Customer Review 5" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex text-yellow-400 text-sm mb-2">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-darkGray text-sm">Reliable service and fair pricing.</p>
+                    </div>
+                </div>
+                
+                <!-- Customer Review 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="static/images/Screenshot 2025-06-04 165756.png" alt="Customer Review 6" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex text-yellow-400 text-sm mb-2">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-darkGray text-sm">Outstanding customer service and results.</p>
+                    </div>
+                </div>
+                
+                <!-- Customer Review 7 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="static/images/Screenshot 2025-06-04 165910.png" alt="Customer Review 7" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex text-yellow-400 text-sm mb-2">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-darkGray text-sm">Final review showcasing our commitment to excellence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-darkGray mb-4">Join our satisfied customers!</p>
+                <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-300">
+                    Book Your Service Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-primary pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="mb-8">
+                    <h2 class="font-heading text-2xl font-bold text-primary mb-2">JLS Assembly & Home Improvements</h2>
+                    <p class="text-darkGray text-lg">Professional Services Since 1988</p>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="mb-8">
+                    <h4 class="font-bold text-primary mb-4 text-lg">Follow Us</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.facebook.com/profile.php?id=100064114780990" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jls_assembly_homeimp" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.yelp.com/biz/jls-assembly-and-home-improvements-conyers" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Yelp">
+                            <i class="fab fa-yelp text-xl"></i>
+                        </a>
+                        <a href="https://www.thumbtack.com/ga/conyers/handyman/jls-assembly-home-improvements-rvr/service/399610228306444290" target="_blank" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300" title="Thumbtack">
+                            <i class="fas fa-thumbtack text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-primary border-opacity-30 pt-6">
+                    <p class="text-darkGray text-sm">&copy; 2025 JLS Assembly & Home Improvements. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = this.querySelector('i');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuIcon = document.querySelector('#mobile-menu-btn i');
+                
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Floating Contact Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="#contact" class="w-16 h-16 rounded-full bg-secondary text-primary flex items-center justify-center shadow-xl hover:bg-yellow-500 transition-transform transform hover:scale-105">
+            <i class="fas fa-envelope text-2xl"></i>
+        </a>
+    </div>
+</body>
+</html>
